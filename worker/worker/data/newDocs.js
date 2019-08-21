@@ -16,4 +16,5 @@ export const newDocsMap = new Map([
     '/quickstart#release-to-your-domain',
   ],
   ['/quickstart/api-keys', '/quickstart#finding-your-cloudflare-api-keys'],
+  ['/quickstart/writing-code', '/quickstart#writing-code'],
 ])
