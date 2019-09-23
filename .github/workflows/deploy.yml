@@ -19,6 +19,8 @@ jobs:
       run: npm install
     - name: Install Hugo
       run: sudo apt-get install hugo
+    - name: Copy config for hugo
+      run: cp config-production.toml config.toml
     - name: Build docs
       run: hugo
     - name: Install Wrangler (standard)
