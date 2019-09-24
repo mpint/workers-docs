@@ -3,8 +3,8 @@ name: Build site
 on:
   pull_request:
     branches:
-      - master
-      - staging
+    - master
+    - staging
 
 jobs:
   build:
@@ -23,8 +23,8 @@ jobs:
     - name: Install Wrangler
       run: npm install -g @cloudflare/wrangler
     - name: Install Workers script deps
-        run: npm install
+      run: npm install
     - name: Build docs
       run: hugo
     - name: Build Workers script
-        run: wrangler build
+      run: wrangler build
