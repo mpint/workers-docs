@@ -1,4 +1,4 @@
-name: Deploy site
+name: Deploy staging site
 
 on:
   push:
@@ -25,13 +25,11 @@ jobs:
       run: hugo
     - name: Install Wrangler
       run: cargo install --git https://github.com/cloudflare/wrangler --tag v1.4.0-rc.2
-    - name: Configure Wrangler
-      run: ~/.cargo/bin/wrangler config $CF_EMAIL $CF_API_KEY
+    - name: Wrangler auth check
+      run: ~/.cargo/bin/wrangler whoami
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
         CF_EMAIL: ${{ secrets.CF_EMAIL }}
-    - name: Wrangler auth check
-      run: ~/.cargo/bin/wrangler whoami
     - name: Upload assets
       run: ~/.cargo/bin/wrangler publish -e staging
       env:
