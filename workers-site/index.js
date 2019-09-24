@@ -17,10 +17,10 @@ const keyModifier = pathname => {
   pathname = pathname.replace(/^\/+/, '')
   // root page
   if (pathname == '') {
-    pathname += 'index.html'
+    pathname += '/index.html'
     // directory page with a trailing /
   } else if (pathname.endsWith('/')) {
-    pathname += 'index.html'
+    pathname += '/index.html'
   }
   return pathname
 }
