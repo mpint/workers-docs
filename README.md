@@ -1,6 +1,6 @@
 # Cloudflare Workers Documentation
 
-This project contains the static website content for the [Cloudflare Workers documentation](https://workers.cloudflare.com/docs/).
+This project contains the static website content for the [Cloudflare Workers documentation](https://developers.cloudflare.com/workers/).
 
 ## Install
 
@@ -28,7 +28,11 @@ npm run start-worker
 
 ## Publishing
 
-To publish to staging
+To publish to staging:
+
+```
+npm run publish staging
+```
 
 # Releasing
 
